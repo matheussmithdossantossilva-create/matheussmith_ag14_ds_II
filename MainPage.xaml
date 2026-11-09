@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="AppHotel2.MainPage"
+    Title="App Hotel"
+    BackgroundColor="#F1F5F9">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+
+            <VerticalStackLayout
+                BackgroundColor="#123B65"
+                Padding="25"
+                Spacing="8">
+
+                <Label
+                    Text="APP HOTEL"
+                    FontSize="30"
+                    FontAttributes="Bold"
+                    TextColor="White"
+                    HorizontalOptions="Center"/>
+
+                <Label
+                    Text="Sistema de gerenciamento de reservas"
+                    FontSize="14"
+                    TextColor="White"
+                    HorizontalOptions="Center"/>
+
+            </VerticalStackLayout>
+
+            <Label
+                Text="Cadastro de Hóspede"
+                FontSize="23"
+                FontAttributes="Bold"
+                TextColor="#123B65"/>
+
+            <Entry
+                x:Name="NomeEntry"
+                Placeholder="Nome completo"
+                TextColor="#172B42"
+                PlaceholderColor="#888888"
+                BackgroundColor="White"/>
+
+            <Entry
+                x:Name="TelefoneEntry"
+                Placeholder="Telefone"
+                Keyboard="Telephone"
+                TextColor="#172B42"
+                PlaceholderColor="#888888"
+                BackgroundColor="White"/>
+
+            <Entry
+                x:Name="EmailEntry"
+                Placeholder="E-mail"
+                Keyboard="Email"
+                TextColor="#172B42"
+                PlaceholderColor="#888888"
+                BackgroundColor="White"/>
+
+            <Label
+                Text="Quantidade de hóspedes"
+                FontSize="18"
+                FontAttributes="Bold"
+                TextColor="#123B65"/>
+
+            <HorizontalStackLayout
+                HorizontalOptions="Center"
+                Spacing="20">
+
+                <Button
+                    Text="-"
+                    WidthRequest="55"
+                    BackgroundColor="#123B65"
+                    TextColor="White"
+                    Clicked="DiminuirHospedes_Clicked"/>
+
+                <Label
+                    x:Name="QuantidadeLabel"
+                    Text="1"
+                    FontSize="25"
+                    FontAttributes="Bold"
+                    TextColor="#123B65"
+                    VerticalOptions="Center"/>
+
+                <Button
+                    Text="+"
+                    WidthRequest="55"
+                    BackgroundColor="#123B65"
+                    TextColor="White"
+                    Clicked="AumentarHospedes_Clicked"/>
+
+            </HorizontalStackLayout>
+
+            <Label
+                Text="Data de Entrada"
+                FontSize="17"
+                FontAttributes="Bold"
+                TextColor="#123B65"/>
+
+            <DatePicker
+                x:Name="EntradaPicker"
+                Format="dd/MM/yyyy"
+                BackgroundColor="White"
+                TextColor="#172B42"/>
+
+            <Label
+                Text="Data de Saída"
+                FontSize="17"
+                FontAttributes="Bold"
+                TextColor="#123B65"/>
+
+            <DatePicker
+                x:Name="SaidaPicker"
+                Format="dd/MM/yyyy"
+                BackgroundColor="White"
+                TextColor="#172B42"/>
+
+            <Button
+                Text="CADASTRAR RESERVA"
+                BackgroundColor="#123B65"
+                TextColor="White"
+                FontAttributes="Bold"
+                CornerRadius="10"
+                HeightRequest="52"
+                Clicked="CadastrarReserva_Clicked"/>
+
+            <Button
+                Text="LIMPAR CAMPOS"
+                BackgroundColor="#D6A84F"
+                TextColor="#172B42"
+                FontAttributes="Bold"
+                CornerRadius="10"
+                HeightRequest="48"
+                Clicked="LimparCampos_Clicked"/>
+
+            <BoxView
+                HeightRequest="2"
+                BackgroundColor="#D6A84F"
+                Margin="0,10"/>
+
+            <Label
+                Text="Reservas cadastradas"
+                FontSize="23"
+                FontAttributes="Bold"
+                TextColor="#123B65"/>
+
+            <VerticalStackLayout
+                x:Name="ListaReservas"
+                Spacing="10"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
